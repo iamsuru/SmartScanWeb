@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(../images/landscape_background.png);
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.details {
+    background-color: rgba(0, 0, 0, 0.150);
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    float: left; 
+    box-sizing: border-box; 
+}
+
+h2 {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.label {
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input {
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 2px;
+}
+
+input {
+    margin: 5px;
+    padding: 2px;
+}
+
+#uploadFile {
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #0DCAF0;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 20px;
+    background-color: #0D6EFD;
+    color: white;
+}
+
+.preview {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    width: 50%;
+    float: right; /* Add this line to make it float to the left */
+    box-sizing: border-box; /* Add this to include padding and margin in width calculation */
+}
+
+iframe{
+    width: 80%;
+    height: 90vh;
+}
+
+
+/*QR Modal Style*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.optionQR {
+    margin-top: 20px; /* Add margin at the top to create a gap */
+}
+
+#timer {
+    margin-top: 50px;
+    font-size: 15px; /* Set the font size */
+    font-weight: bold; /* Make the text bold */
+    color: red; /* Set text color to a shade of orange */
+    background-color: #f9f9f9; /* Set background color */
+    padding: 8px 16px; /* Set padding around the text */
+    border: 2px solid #ff5733; /* Add a solid border */
+    border-radius: 25px; /* Make the border more rounded */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 31%; /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#fileName{
+    color: #fd0d0d;
+    font-weight: bold;
+}

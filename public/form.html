@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/form_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"
+        integrity="sha512-pUhApVQtLbnpLtJn6DuzDD5o2xtmLJnJ7oBoMsBnzOkVkpqofGLGPaBJ6ayD2zQe3lCgCibhJBi4cj5wAxwVKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Form - SmartScan</title>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="details">
+            <h2>Enter Details</h2>
+            <form method="post" action="/uploadToDatabase">
+                <label class="label" for="full_name">Full Name</label><br>
+                <input class="input" type="text" id="full_name" name="full_name" autocomplete="off"><br>
+
+                <label class="label" for="email">Email ID</label><br>
+                <input class="input" type="text" id="email" name="email" autocomplete="off"><br>
+
+                <label class="label" for="dob">Date of Birth</label><br>
+                <input class="input" type="date" id="dob" name="dob" autocomplete="off"><br>
+
+                <label class="label" for="mobile_number">Mobile Number</label><br>
+                <input class="input" type="tel" id="mobile_number" name="mobile_number" autocomplete="off"><br>
+
+                <label class="label" for="">Gender</label><br>
+                <input type="radio" value="Male" name="gender" id="male"><label for="male">Male</label>
+                <input type="radio" value="Female" name="gender" id="female"><label for="female">Female</label>
+                <input type="radio" value="Other" name="gender" id="other"><label for="other">Other</label>
+                <br>
+
+                <label class="label" for="">Document</label>
+                <input type="button" value="Upload" id="uploadFile"><br> <br>
+                <label id="fileName" for=""></label>
+                <div class="modal" id="myModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span><br><br>
+                        <!-- Available options -->
+                        <div class="options">
+                            <input type="file" name="document-to-upload" id="fileInput">
+                            <p>Or</p>
+                            <span>Using SmartScan</span>
+                            <input type="button" id="qrOpener" value="Show QR Code">
+                        </div>
+
+                        <!-- if user choose SmartScan option -->
+                        <div class="optionQR">
+                            <canvas id="qrcode"></canvas><br><br>
+                            <label id="timer">60 Seconds</label><br><br>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="preview">
+            <iframe id="iFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script src="./scripts/modal.js"></script>
+</body>
+</html>
