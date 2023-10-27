@@ -7,7 +7,7 @@ var optionQRDiv = document.querySelector('.optionQR')
 var fileInput = document.getElementById('fileInput')
 var qr = ''
 var intervalId
-var url = 'https://smartscan.onrender.com//'
+var url = 'https://smartscan.onrender.com/'
 // var url = 'https://localhost:2000/'
 const uniqueID = generateUniqueID()
 
